@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.loan.mngmt.CustService.custService.java&apos; to &apos;CustService.java&apos;&#x0D;&#x0A;- Original project: &apos;loan-mngmt-svc&apos;&#x0D;&#x0A;- Original element: &apos;com.loan.mngmt.CustService.custService.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.loan.mngmt.CustService.CustService.java&apos;" description="Rename compilation unit &apos;custService.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.loan.mngmt.CustService{custService.java" name="CustService.java" references="false" stamp="1604892263562" version="1.0"/>
+</session>

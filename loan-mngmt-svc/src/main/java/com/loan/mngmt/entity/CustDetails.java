@@ -1,0 +1,33 @@
+package com.loan.mngmt.entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+public class CustDetails {
+
+	@Id
+	@GeneratedValue
+	private Long custId;
+	private String custName;
+	private String userName;
+	private String userPassword;
+	private String custAddress;
+	private String custState;
+	private String custCountry;
+	private String custEmailAddres;
+	private String custPan;
+	private String custConstactNo;
+	private Date custDOB;
+	private String accountType;
+	private Integer accountNumber;
+	
+}

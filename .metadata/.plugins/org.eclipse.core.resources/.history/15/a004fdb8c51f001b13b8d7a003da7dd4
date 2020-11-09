@@ -1,0 +1,25 @@
+package com.loan.mngmt.entity;
+
+import java.util.Date;
+
+import lombok.Getter;
+import lombok.Setter;
+
+public class CustDetails {
+
+	@Getter
+	@Setter
+	String custName;
+	String userName;
+	String userPassword;
+	String custAddress;
+	String custState;
+	String custCountry;
+	String custEmailAddres;
+	String custPan;
+	String custConstactNo;
+	Date custDOB;
+	String accountType;
+	String accountNumber;
+	
+}
