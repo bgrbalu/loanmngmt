@@ -1,5 +1,7 @@
 package com.loan.request.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +19,9 @@ LoanReqService loanReqService;
 
 	@RequestMapping (value = "/custRequest", consumes = "application/json", produces = "application/json")
 	public String customerLoanRequest(@RequestBody LoanRequest loanRequest) {
-		loanReqService.saveLoanRequest(loanRequest);
+		Optional<LoanRequest> loanDetails = loanReqService.saveLoanRequest(loanRequest);
 		
-		return loanRequest.getAccountNumber().toString();
+		return loanDetails.get().getAccountNumber().toString();
 	}
 
 
