@@ -1,143 +1,67 @@
 package com.loan.mngmt.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import lombok.Data;
+
 
 @Entity
-public class CustDetails {
+@Data
+public class CustDetails implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	
 	@Id
-	@GeneratedValue
-	private Long custId;
+	@GeneratedValue (strategy = GenerationType.SEQUENCE)
+	@Column(name = "ACCOUNT_NUMBER")
+	private Integer accountNumber;
 	
+	@Column(name = "CUST_NAME")
 	private String custName;
 	
+	@Column(name = "USER_NAME")
 	private String userName;
 	
+	@Column(name = "USER_PASSWORD")
 	private String userPassword;
 	
+	@Column(name = "CUST_ADDRESS")
 	private String custAddress;
-
+	
+	@Column(name = "CUST_STATE")
 	private String custState;
-
+	
+	@Column(name = "CUST_COUNTRY")
 	private String custCountry;
-
+	
+	@Column(name = "CUST_EMAIL_ADDRES")
 	private String custEmailAddres;
 	
+	@Column(name = "CUST_PAN")
 	private String custPan;
-
-	private String custConstactNo;
 	
+	@Column(name = "CUST_CONTACT_NO")
+	private String custContactNo;
+	
+	@Column(name = "CUSTDOB")
 	private Date custDOB;
 	
+	@Column(name = "ACCOUNT_TYPE")
 	private String accountType;
-	
-	private Integer accountNumber;
-
-	/**
-	 * @return the custName
-	 */
-	public String getCustName() {
-		return custName;
-	}
-
-	/**
-	 * @param custName the custName to set
-	 */
-	public void setCustName(String custName) {
-		this.custName = custName;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getUserPassword() {
-		return userPassword;
-	}
-
-	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
-	}
-
-	public String getCustAddress() {
-		return custAddress;
-	}
-
-	public void setCustAddress(String custAddress) {
-		this.custAddress = custAddress;
-	}
-
-	public String getCustState() {
-		return custState;
-	}
-
-	public void setCustState(String custState) {
-		this.custState = custState;
-	}
-
-	public String getCustCountry() {
-		return custCountry;
-	}
-
-	public void setCustCountry(String custCountry) {
-		this.custCountry = custCountry;
-	}
-
-	public String getCustEmailAddres() {
-		return custEmailAddres;
-	}
-
-	public void setCustEmailAddres(String custEmailAddres) {
-		this.custEmailAddres = custEmailAddres;
-	}
-
-	public String getCustPan() {
-		return custPan;
-	}
-
-	public void setCustPan(String custPan) {
-		this.custPan = custPan;
-	}
-
-	public String getCustConstactNo() {
-		return custConstactNo;
-	}
-
-	public void setCustConstactNo(String custConstactNo) {
-		this.custConstactNo = custConstactNo;
-	}
-
-	public Date getCustDOB() {
-		return custDOB;
-	}
-
-	public void setCustDOB(Date custDOB) {
-		this.custDOB = custDOB;
-	}
-
-	public String getAccountType() {
-		return accountType;
-	}
-
-	public void setAccountType(String accountType) {
-		this.accountType = accountType;
-	}
-
-	public Integer getAccountNumber() {
-		return accountNumber;
-	}
-
-	public void setAccountNumber(Integer accountNumber) {
-		this.accountNumber = accountNumber;
-	}
 	
 	
 }
