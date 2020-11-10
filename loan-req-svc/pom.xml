@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.loan</groupId>
-	<artifactId>loan-mngmt-svc</artifactId>
+	<artifactId>loan-req-svc</artifactId>
 	<version>0.0.1</version>
-	<name>loan-mngmt-svc</name>
+	<name>loan-req-svc</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -58,7 +58,6 @@
 	    	<artifactId>h2</artifactId>
 	    	<scope>runtime</scope>
 		</dependency>
-		
 	</dependencies>
 
 	<build>
