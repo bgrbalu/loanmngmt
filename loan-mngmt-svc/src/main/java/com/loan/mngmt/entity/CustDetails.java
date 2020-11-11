@@ -17,6 +17,7 @@ import lombok.Data;
 
 @Entity
 @Data
+@Table(name = "cust_details")
 public class CustDetails implements Serializable {
 	
 	/**
@@ -26,7 +27,10 @@ public class CustDetails implements Serializable {
 	
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.SEQUENCE)
+	@GeneratedValue (strategy = GenerationType.AUTO)
+	@Column(name = "CUST_ID")
+	private Integer cust_id;
+	
 	@Column(name = "ACCOUNT_NUMBER")
 	private Integer accountNumber;
 	

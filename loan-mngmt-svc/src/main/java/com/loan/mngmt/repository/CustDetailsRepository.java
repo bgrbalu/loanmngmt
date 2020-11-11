@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.loan.mngmt.entity.CustDetails;
 
 @Repository
-public interface CustDetailsRepository extends JpaRepository<CustDetails, Long> {
+public interface CustDetailsRepository extends JpaRepository<CustDetails, Integer> {
 	
 	public List<CustDetails> findByAccountNumber(Integer accountNumber);
 	

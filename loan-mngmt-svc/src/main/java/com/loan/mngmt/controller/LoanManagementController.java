@@ -41,10 +41,11 @@ public class LoanManagementController {
 		
 		for (CustDetails custdetail : toUpdateList) {
 
-			if (updCustomer.getAccountNumber() == custdetail.getAccountNumber()) {
+			if (updCustomer.getAccountNumber().intValue() == custdetail.getAccountNumber().intValue()) {
 				// Validate user access
-				if (updCustomer.getUserName() == custdetail.getUserName()
+				if (updCustomer.getUserName().equals(custdetail.getUserName())
 						&& updCustomer.getUserPassword().equals(custdetail.getUserPassword())) {
+					updCustomer.setCust_id(custdetail.getCust_id());
 					custService.custRegistration(updCustomer);
 					break;
 				} else {
