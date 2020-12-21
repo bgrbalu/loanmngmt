@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: Loan Request Service
   data:
     jpa:
       repositories:
@@ -14,3 +16,5 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+server:
+  port: 8095
