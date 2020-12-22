@@ -1,6 +1,5 @@
 package com.loan.request.service;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +13,16 @@ public class LoanReqService {
 
 	@Autowired
 	LoanReqRepository loanRepository;
+
 	public Optional<LoanRequest> saveLoanRequest(LoanRequest loanRequest) {
 		// Save the load request
-		loanRepository.save(loanRequest);
-		return loanRepository.findById(loanRequest.getId());
-		
+		try {
+			loanRepository.save(loanRequest);
+			return loanRepository.findById(loanRequest.getId());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 }
