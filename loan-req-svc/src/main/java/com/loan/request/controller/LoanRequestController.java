@@ -20,7 +20,6 @@ LoanReqService loanReqService;
 	@RequestMapping (value = "/custRequest", consumes = "application/json", produces = "application/json")
 	public String customerLoanRequest(@RequestBody LoanRequest loanRequest) {
 		Optional<LoanRequest> loanDetails = loanReqService.saveLoanRequest(loanRequest);
-		
 		return loanDetails.get().getAccountNumber().toString();
 	}
 
